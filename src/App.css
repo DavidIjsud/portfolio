@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.search-container {
+  /* property to align all items of this div inline */
+  display: inline-flex;
+  /* property to align all items of this div vertically centered*/
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  margin:  auto; /* Centers the div horizontally */
+  padding: 10px; /* Optional: Adds some spacing around the content *//* Optional: Adds rounded corners */
+}
+
+.parent-of-search-container {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  /* property to align all items of this div vertically one below the other*/
+  flex-direction: column;
+  justify-content: center;
+}
+
+.line-divider{
+
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+
+}
+
+.search-input {
+  padding: 10px 20px;
+  height: 45px;
+  width: 550px; /* Adjust the width as needed */
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Makes the input have round borders */
+  outline: none;
+  font-size: 16px;
+}
+
+.product-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  background-color: aqua;
+  width: 300px;
+  height: 100px;
+}
+
+.logo{
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+}
+
+.search-input:focus {
+  border-color: #007BFF; /* Changes border color when focused */
+}
