@@ -44,14 +44,16 @@ export default function Menu() {
         }}
       >
         <Box sx={{ display: "flex", flexDirection: "row", gap: 2 }}>
-          {["Home", "Services", "Portfolio", "Contact"].map((item) => (
-            <MenuItem
-              key={item}
-              item={item}
-              handleMenuSelected={handleMenuSelected}
-              isSelected={item === menuSelected}
-            />
-          ))}
+          {["Home", "Services", "Portfolio", "Contact", "Resume"].map(
+            (item) => (
+              <MenuItem
+                key={item}
+                item={item}
+                handleMenuSelected={handleMenuSelected}
+                isSelected={item === menuSelected}
+              />
+            )
+          )}
         </Box>
         <Box
           sx={{

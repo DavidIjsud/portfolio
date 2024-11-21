@@ -15,18 +15,33 @@ export default function MenuItem(item: MenuItemProps) {
         flexDirection: "row",
       }}
     >
-      <Link
-        to={item.item}
-        smooth={true}
-        onClick={() => item.handleMenuSelected(item.item)}
-        style={{
-          marginRight: "20px",
-          color: item.isSelected ? "#A08831" : "white",
-          cursor: "pointer",
-        }}
-      >
-        {item.item}
-      </Link>
+      {item.item === "Resume" ? (
+        <a
+          href="/cv.pdf"
+          target="_blank"
+          style={{
+            marginRight: "20px",
+            color: item.isSelected ? "#A08831" : "white",
+            cursor: "pointer",
+            textDecoration: "none",
+          }}
+        >
+          Resume
+        </a>
+      ) : (
+        <Link
+          to={item.item}
+          smooth={true}
+          onClick={() => item.handleMenuSelected(item.item)}
+          style={{
+            marginRight: "20px",
+            color: item.isSelected ? "#A08831" : "white",
+            cursor: "pointer",
+          }}
+        >
+          {item.item}
+        </Link>
+      )}
     </Box>
   );
 }
