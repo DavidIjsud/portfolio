@@ -48,6 +48,19 @@ export default function HomeContactInformation() {
       </Box>
       <Button
         variant="outlined"
+        href="https://calendly.com/davidijsud"
+        target="_blank"
+        sx={{
+          marginTop: "30px",
+          color: "white",
+          borderColor: "#A08831",
+          width: "180px",
+        }}
+      >
+        Schedule a meet
+      </Button>
+      <Button
+        variant="outlined"
         href="https://wa.link/x33p6u"
         target="_blank"
         sx={{
