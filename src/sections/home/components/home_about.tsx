@@ -18,7 +18,7 @@ export default function HomeAbout() {
       <h1>MOBILE, BACKEND ENGINEER</h1>
       <p>
         I'm David, a mobile developer passionate about turning ideas into
-        impactful apps that users love. With over 5 years of experience, I’ve
+        impactful apps that users love. With over 7 years of experience, I’ve
         built mobile and web solutions that deliver seamless, intuitive
         experiences, from streamlined fintech apps to user-centered e-commerce
         platforms. My work with companies like Presto, Loyalty Clubs, and
