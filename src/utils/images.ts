@@ -63,27 +63,26 @@ import loyaltyOne from "../assets/images/mobile/loyalty/loyalty-1.png";
 import loyaltyTwo from "../assets/images/mobile/loyalty/loyalty-2.png";
 import loyaltyThree from "../assets/images/mobile/loyalty/loyalty-3.png";
 
+import abastibleOne from "../assets/images/mobile/abastible/abastible1.jpg";
+import abastibleTwo from "../assets/images/mobile/abastible/abastible2.jpg";
+import abastibleThree from "../assets/images/mobile/abastible/abastible3.jpg";
+import abastibleFour from "../assets/images/mobile/abastible/abastible4.jpg";
+import abastibleFive from "../assets/images/mobile/abastible/abastible5.jpg";
+import abastibleSix from "../assets/images/mobile/abastible/abastible6.jpg";
+
 import webOne from "../assets/images/web/web-1.png";
 import webTwo from "../assets/images/web/web-2.png";
 import webThree from "../assets/images/web/web-3.png";
 import webFour from "../assets/images/web/web-4.png";
 import webFive from "../assets/images/web/web-5.png";
 
+export const abastibleImages = [abastibleOne, abastibleTwo, abastibleThree, abastibleFour, abastibleFive, abastibleSix];
+
 export const webImages = [webOne, webTwo, webThree, webFour, webFive];
 
 export const loyaltyImages = [loyaltyOne, loyaltyTwo, loyaltyThree];
 
-export const laComerImages = [
-  laComerOne,
-  laComerTwo,
-  laComerThree,
-  laComerFour,
-  laComerFive,
-  laComerSix,
-  laComerSeven,
-  laComerEight,
-  laComerNine,
-];
+export const laComerImages = [laComerOne, laComerTwo, laComerThree, laComerFour, laComerFive, laComerSix, laComerSeven, laComerEight, laComerNine];
 
 export const misCuentasImages = [
   misCuentasOne,

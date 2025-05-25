@@ -1,9 +1,5 @@
 import Box from "@mui/material/Box";
-import {
-  misCuentasImages,
-  laComerImages,
-  loyaltyImages,
-} from "../../../utils/images";
+import { misCuentasImages, laComerImages, loyaltyImages } from "../../../utils/images";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { ProjectsProps } from "./first_general_row";
 
