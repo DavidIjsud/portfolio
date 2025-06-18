@@ -2,8 +2,44 @@ import Box from "@mui/material/Box";
 import { misCuentasImages, laComerImages, loyaltyImages } from "../../../utils/images";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { ProjectsProps } from "./first_general_row";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import React from "react";
+
+const playStoreLinks = {
+  miscuentas: "https://play.google.com/store/apps/details?id=miscuentas.com.bo.miscuentas&hl=es_CO",
+  lacomer: "https://play.google.com/store/apps/details?id=com.LaComerApp&hl=es_CO",
+  loyalty: "https://play.google.com/store/apps/details?id=com.loyaltyclubs.shell",
+};
 
 export const SecondGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
+  const [menuAnchor, setMenuAnchor] = React.useState<null | HTMLElement>(null);
+  const [selectedProject, setSelectedProject] = React.useState<null | "miscuentas" | "lacomer" | "loyalty">(null);
+
+  const handleBoxClick = (event: React.MouseEvent<HTMLElement>, project: "miscuentas" | "lacomer" | "loyalty") => {
+    setMenuAnchor(event.currentTarget);
+    setSelectedProject(project);
+  };
+
+  const handleCloseMenu = () => {
+    setMenuAnchor(null);
+    setSelectedProject(null);
+  };
+
+  const handleViewImages = () => {
+    if (selectedProject === "miscuentas") onOpenDialog(misCuentasImages);
+    else if (selectedProject === "lacomer") onOpenDialog(laComerImages);
+    else if (selectedProject === "loyalty") onOpenDialog(loyaltyImages);
+    handleCloseMenu();
+  };
+
+  const handleOpenPlayStore = () => {
+    if (selectedProject) {
+      window.open(playStoreLinks[selectedProject], "_blank");
+    }
+    handleCloseMenu();
+  };
+
   return (
     <Box
       sx={{
@@ -16,7 +52,7 @@ export const SecondGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
       }}
     >
       <Box
-        onClick={() => onOpenDialog(misCuentasImages)}
+        onClick={(e) => handleBoxClick(e, "miscuentas")}
         sx={{
           width: "33.33%",
           height: "800px",
@@ -66,9 +102,9 @@ export const SecondGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
             cursor: "pointer",
             position: "absolute",
             transition: "all 0.5s ease",
-            top: "10%", // Initial position
-            left: "10%", // Adjust as needed
-            zIndex: 1, // Layer priority
+            top: "10%",
+            left: "10%",
+            zIndex: 1,
           }}
         />
         <Box
@@ -82,15 +118,15 @@ export const SecondGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
             cursor: "pointer",
             position: "absolute",
             transition: "all 0.5s ease",
-            top: "40%", // Initial position
-            left: "30%", // Adjust as needed
-            zIndex: 2, // Higher priority
+            top: "40%",
+            left: "30%",
+            zIndex: 2,
           }}
         />
       </Box>
 
       <Box
-        onClick={() => onOpenDialog(laComerImages)}
+        onClick={(e) => handleBoxClick(e, "lacomer")}
         sx={{
           width: "33.33%",
           height: "800px",
@@ -140,9 +176,9 @@ export const SecondGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
             cursor: "pointer",
             position: "absolute",
             transition: "all 0.5s ease",
-            top: "10%", // Initial position
-            left: "10%", // Adjust as needed
-            zIndex: 1, // Layer priority
+            top: "10%",
+            left: "10%",
+            zIndex: 1,
           }}
         />
         <Box
@@ -156,14 +192,14 @@ export const SecondGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
             cursor: "pointer",
             position: "absolute",
             transition: "all 0.5s ease",
-            top: "40%", // Initial position
-            left: "30%", // Adjust as needed
-            zIndex: 2, // Higher priority
+            top: "40%",
+            left: "30%",
+            zIndex: 2,
           }}
         />
       </Box>
       <Box
-        onClick={() => onOpenDialog(loyaltyImages)}
+        onClick={(e) => handleBoxClick(e, "loyalty")}
         sx={{
           width: "33.33%",
           height: "800px",
@@ -177,6 +213,7 @@ export const SecondGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
             height: "75%",
             transition: "all 0.15s ease",
           },
+          cursor: "pointer",
         }}
       >
         <Box
@@ -213,6 +250,10 @@ export const SecondGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
           }}
         />
       </Box>
+      <Menu anchorEl={menuAnchor} open={Boolean(menuAnchor)} onClose={handleCloseMenu}>
+        <MenuItem onClick={handleViewImages}>View Images</MenuItem>
+        <MenuItem onClick={handleOpenPlayStore}>Open in Google Play</MenuItem>
+      </Menu>
     </Box>
   );
 };
