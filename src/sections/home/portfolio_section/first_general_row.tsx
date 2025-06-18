@@ -15,6 +15,11 @@ const playStoreLinks = {
   manzana: "https://play.google.com/store/search?q=Manzana%20Verde&c=apps&hl=es_CO",
 };
 
+const appStoreLinks = {
+  heb: "https://apps.apple.com/mx/app/mi-h-e-b/id545728013",
+  manzana: "https://apps.apple.com/bo/app/manzana-verde-healthy-food/id1542798197?l=en-GB",
+};
+
 export const FirstGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
   const [menuAnchor, setMenuAnchor] = React.useState<null | HTMLElement>(null);
   const [selectedProject, setSelectedProject] = React.useState<null | "heb" | "presto" | "manzana">(null);
@@ -39,6 +44,13 @@ export const FirstGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
   const handleOpenPlayStore = () => {
     if (selectedProject) {
       window.open(playStoreLinks[selectedProject], "_blank");
+    }
+    handleCloseMenu();
+  };
+
+  const handleOpenAppStore = () => {
+    if (selectedProject && selectedProject in appStoreLinks) {
+      window.open(appStoreLinks[selectedProject as keyof typeof appStoreLinks], "_blank");
     }
     handleCloseMenu();
   };
@@ -259,6 +271,7 @@ export const FirstGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
         ) : (
           <MenuItem onClick={handleOpenPlayStore}>Open in Google Play</MenuItem>
         )}
+        {(selectedProject === "heb" || selectedProject === "manzana") && <MenuItem onClick={handleOpenAppStore}>Open in App Store</MenuItem>}
       </Menu>
     </Box>
   );

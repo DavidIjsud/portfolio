@@ -12,6 +12,12 @@ const playStoreLinks = {
   loyalty: "https://play.google.com/store/apps/details?id=com.loyaltyclubs.shell",
 };
 
+const appStoreLinks = {
+  miscuentas: "https://apps.apple.com/bo/app/mis-cuentas-bolivia/id6448075291?l=en-GB",
+  lacomer: "https://apps.apple.com/mx/app/la-comer/id1383866805",
+  // loyalty: no app store link
+};
+
 export const SecondGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
   const [menuAnchor, setMenuAnchor] = React.useState<null | HTMLElement>(null);
   const [selectedProject, setSelectedProject] = React.useState<null | "miscuentas" | "lacomer" | "loyalty">(null);
@@ -36,6 +42,13 @@ export const SecondGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
   const handleOpenPlayStore = () => {
     if (selectedProject) {
       window.open(playStoreLinks[selectedProject], "_blank");
+    }
+    handleCloseMenu();
+  };
+
+  const handleOpenAppStore = () => {
+    if (selectedProject && selectedProject in appStoreLinks) {
+      window.open(appStoreLinks[selectedProject as keyof typeof appStoreLinks], "_blank");
     }
     handleCloseMenu();
   };
@@ -253,6 +266,7 @@ export const SecondGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
       <Menu anchorEl={menuAnchor} open={Boolean(menuAnchor)} onClose={handleCloseMenu}>
         <MenuItem onClick={handleViewImages}>View Images</MenuItem>
         <MenuItem onClick={handleOpenPlayStore}>Open in Google Play</MenuItem>
+        {(selectedProject === "miscuentas" || selectedProject === "lacomer") && <MenuItem onClick={handleOpenAppStore}>Open in App Store</MenuItem>}
       </Menu>
     </Box>
   );
