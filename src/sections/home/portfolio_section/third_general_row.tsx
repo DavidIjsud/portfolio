@@ -2,8 +2,33 @@ import Box from "@mui/material/Box";
 import { webImages } from "../../../utils/images";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { ProjectsProps } from "./first_general_row";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import React from "react";
+
+const githubLink = "https://github.com/DavidIjsud/hobby-ecommerce-web";
 
 export const ThirdGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
+  const [menuAnchor, setMenuAnchor] = React.useState<null | HTMLElement>(null);
+
+  const handleBoxClick = (event: React.MouseEvent<HTMLElement>) => {
+    setMenuAnchor(event.currentTarget);
+  };
+
+  const handleCloseMenu = () => {
+    setMenuAnchor(null);
+  };
+
+  const handleViewImages = () => {
+    onOpenDialog(webImages);
+    handleCloseMenu();
+  };
+
+  const handleOpenGitHub = () => {
+    window.open(githubLink, "_blank");
+    handleCloseMenu();
+  };
+
   return (
     <Box
       sx={{
@@ -16,7 +41,7 @@ export const ThirdGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
       }}
     >
       <Box
-        onClick={() => onOpenDialog(webImages)}
+        onClick={handleBoxClick}
         sx={{
           width: "70.33%",
           height: "800px",
@@ -88,6 +113,10 @@ export const ThirdGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
           }}
         />
       </Box>
+      <Menu anchorEl={menuAnchor} open={Boolean(menuAnchor)} onClose={handleCloseMenu}>
+        <MenuItem onClick={handleViewImages}>View Images</MenuItem>
+        <MenuItem onClick={handleOpenGitHub}>Open in GitHub</MenuItem>
+      </Menu>
     </Box>
   );
 };

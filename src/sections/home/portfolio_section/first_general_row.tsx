@@ -1,12 +1,60 @@
 import Box from "@mui/material/Box";
 import { hebImages, prestoImages, manzanaImages } from "../../../utils/images";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import React from "react";
 
 export type ProjectsProps = {
   onOpenDialog: (images: string[]) => void;
 };
 
+const playStoreLinks = {
+  heb: "https://play.google.com/store/apps/details?id=com.hebmex.cel&hl=es_CO",
+  presto: "https://github.com/DavidIjsud/presto-latam", // Changed to GitHub
+  manzana: "https://play.google.com/store/search?q=Manzana%20Verde&c=apps&hl=es_CO",
+};
+
+const appStoreLinks = {
+  heb: "https://apps.apple.com/mx/app/mi-h-e-b/id545728013",
+  manzana: "https://apps.apple.com/bo/app/manzana-verde-healthy-food/id1542798197?l=en-GB",
+};
+
 export const FirstGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
+  const [menuAnchor, setMenuAnchor] = React.useState<null | HTMLElement>(null);
+  const [selectedProject, setSelectedProject] = React.useState<null | "heb" | "presto" | "manzana">(null);
+
+  const handleBoxClick = (event: React.MouseEvent<HTMLElement>, project: "heb" | "presto" | "manzana") => {
+    setMenuAnchor(event.currentTarget);
+    setSelectedProject(project);
+  };
+
+  const handleCloseMenu = () => {
+    setMenuAnchor(null);
+    setSelectedProject(null);
+  };
+
+  const handleViewImages = () => {
+    if (selectedProject === "heb") onOpenDialog(hebImages);
+    else if (selectedProject === "presto") onOpenDialog(prestoImages);
+    else if (selectedProject === "manzana") onOpenDialog(manzanaImages);
+    handleCloseMenu();
+  };
+
+  const handleOpenPlayStore = () => {
+    if (selectedProject) {
+      window.open(playStoreLinks[selectedProject], "_blank");
+    }
+    handleCloseMenu();
+  };
+
+  const handleOpenAppStore = () => {
+    if (selectedProject && selectedProject in appStoreLinks) {
+      window.open(appStoreLinks[selectedProject as keyof typeof appStoreLinks], "_blank");
+    }
+    handleCloseMenu();
+  };
+
   return (
     <Box
       sx={{
@@ -19,7 +67,7 @@ export const FirstGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
       }}
     >
       <Box
-        onClick={() => onOpenDialog(hebImages)}
+        onClick={(e) => handleBoxClick(e, "heb")}
         sx={{
           width: "33.33%",
           height: "800px",
@@ -69,9 +117,9 @@ export const FirstGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
             cursor: "pointer",
             position: "absolute",
             transition: "all 0.5s ease",
-            top: "10%", // Initial position
-            left: "10%", // Adjust as needed
-            zIndex: 1, // Layer priority
+            top: "10%",
+            left: "10%",
+            zIndex: 1,
           }}
         />
         <Box
@@ -85,14 +133,14 @@ export const FirstGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
             cursor: "pointer",
             position: "absolute",
             transition: "all 0.5s ease",
-            top: "40%", // Initial position
-            left: "30%", // Adjust as needed
-            zIndex: 2, // Higher priority
+            top: "40%",
+            left: "30%",
+            zIndex: 2,
           }}
         />
       </Box>
       <Box
-        onClick={() => onOpenDialog(prestoImages)}
+        onClick={(e) => handleBoxClick(e, "presto")}
         sx={{
           width: "33.33%",
           height: "800px",
@@ -144,7 +192,7 @@ export const FirstGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
         />
       </Box>
       <Box
-        onClick={() => onOpenDialog(manzanaImages)}
+        onClick={(e) => handleBoxClick(e, "manzana")}
         sx={{
           width: "33.33%",
           height: "800px",
@@ -194,9 +242,9 @@ export const FirstGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
             cursor: "pointer",
             position: "absolute",
             transition: "all 0.5s ease",
-            top: "10%", // Initial position
-            left: "10%", // Adjust as needed
-            zIndex: 1, // Layer priority
+            top: "10%",
+            left: "10%",
+            zIndex: 1,
           }}
         />
         <Box
@@ -210,12 +258,21 @@ export const FirstGeneralRow = ({ onOpenDialog }: ProjectsProps) => {
             cursor: "pointer",
             position: "absolute",
             transition: "all 0.5s ease",
-            top: "40%", // Initial position
-            left: "30%", // Adjust as needed
-            zIndex: 2, // Higher priority
+            top: "40%",
+            left: "30%",
+            zIndex: 2,
           }}
         />
       </Box>
+      <Menu anchorEl={menuAnchor} open={Boolean(menuAnchor)} onClose={handleCloseMenu}>
+        <MenuItem onClick={handleViewImages}>View Images</MenuItem>
+        {selectedProject === "presto" ? (
+          <MenuItem onClick={handleOpenPlayStore}>Open in GitHub</MenuItem>
+        ) : (
+          <MenuItem onClick={handleOpenPlayStore}>Open in Google Play</MenuItem>
+        )}
+        {(selectedProject === "heb" || selectedProject === "manzana") && <MenuItem onClick={handleOpenAppStore}>Open in App Store</MenuItem>}
+      </Menu>
     </Box>
   );
 };
