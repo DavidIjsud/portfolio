@@ -1,26 +1,37 @@
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+
 export default function HomeContactInformation() {
   return (
     <Box
       sx={{
         display: "flex",
         flexDirection: "column",
-        width: "20%",
-        height: "90%",
+        width: { xs: "20%", md: "20%" },
+        height: { xs: "auto", md: "90%" },
+        alignItems: { xs: "center", md: "flex-start" },
       }}
     >
-      <h1 style={{ lineHeight: "1", fontSize: "70px" }}>
+      <Box
+        component="h1"
+        sx={{
+          lineHeight: "1",
+          fontSize: { xs: "3rem", md: "70" },
+          textAlign: { xs: "center", md: "left" },
+          margin: 0,
+        }}
+      >
         <span style={{ display: "block" }}>David</span>
         <span style={{ display: "block" }}>
           Garcia<span style={{ color: "#A08831" }}>.</span>
         </span>
-      </h1>
+      </Box>
       <Box
         sx={{
           width: "40px",
           height: 2,
           backgroundColor: "#A08831",
+          margin: { xs: "8px auto", md: 0 },
         }}
       ></Box>
       <Box
@@ -29,6 +40,7 @@ export default function HomeContactInformation() {
           flexDirection: "row",
           marginTop: "20px",
           gap: 1,
+          justifyContent: { xs: "center", md: "flex-start" },
         }}
       >
         <a
@@ -36,7 +48,9 @@ export default function HomeContactInformation() {
           target="_blank"
           style={{ textDecoration: "none", color: "white" }}
         >
-          <h4 style={{ cursor: "pointer" }}>Tiktok |</h4>
+          <h4 style={{ cursor: "pointer" }}>
+            Tiktok
+          </h4>
         </a>
         <a
           href="https://www.youtube.com/@codeya"
@@ -54,7 +68,7 @@ export default function HomeContactInformation() {
           marginTop: "30px",
           color: "white",
           borderColor: "#A08831",
-          width: "180px",
+          width: { xs: "220px", md: "180px" },
         }}
       >
         Schedule a meet
@@ -67,7 +81,7 @@ export default function HomeContactInformation() {
           marginTop: "30px",
           color: "white",
           borderColor: "#A08831",
-          width: "150px",
+          width: { xs: "180px", md: "150px" },
         }}
       >
         Contact me

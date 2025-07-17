@@ -7,27 +7,61 @@ export default function HomeAbout() {
       sx={{
         display: "flex",
         flexDirection: "column",
-        height: "90%",
-        width: "30%",
-        marginLeft: "80px",
+        height: { xs: "auto", md: "90%" },
+        width: { xs: "100%", md: "30%" },
+        marginLeft: { xs: 0, md: 10 },
+        padding: { xs: 2, md: 0 },
+        textAlign: { xs: "center", md: "left" },
       }}
     >
-      <h2 style={{ lineHeight: "0", fontSize: "23px", color: "#A08831" }}>INTRODUCTION</h2>
-      <h1>MOBILE, BACKEND ENGINEER</h1>
-      <p>
-        I am a passionate and dedicated mobile engineer with over 7 years of experience building high-impact mobile applications and
-        backend-integrated solutions. Proven track record of delivering high-quality, user-friendly apps with thousands of downloads across Google
-        Play and the Apple App Store.
+      <Box
+        component="h2"
+        sx={{
+          lineHeight: "0",
+          fontSize: { xs: 18, md: 23 },
+          color: "#A08831",
+        }}
+      >
+        INTRODUCTION
+      </Box>
+      <Box
+        component="h1"
+        sx={{
+          fontSize: { xs: 24, sm: "28px", md: "inherit" },
+          lineHeight: { xs: 1.2, md: "inherit" },
+        }}
+      >
+        MOBILE, BACKEND ENGINEER
+      </Box>
+      <Box
+        component="p"
+        sx={{
+          fontSize: { xs: 14, sm: "16px", md: "inherit" },
+          lineHeight: { xs: 1.5, md: "inherit" },
+          textAlign: { xs: "justify", md: "left" },
+          padding: { xs: "0 10px", md: 0 },
+        }}
+      >
+        I'm David, a mobile developer passionate about turning ideas into impactful apps that users love. With over 7 years of experience, I’ve built
+        mobile and web solutions that deliver seamless, intuitive experiences, from streamlined fintech apps to user-centered e-commerce platforms. My
+        work with companies like Presto, Loyalty Clubs, and Manzana Verde Inc. has earned thousands of downloads, driven by my dedication to quality
+        and ease of use.
         <br />
-        <br />I have contributed to high-profile projects for companies such as Presto, Loyalty Clubs, and Manzana Verde Inc., leveraging the Flutter
-        framework and clean architecture principles to build scalable and maintainable codebases.
         <br />
-        <br />
-        Experienced in CI/CD automation using GitHub and Codemagic, and proficient in Firebase for cloud functions, analytics, and real-time features.
-        Additionally, I have working knowledge of backend integration using AWS services like S3, Buckets, and Lambda functions.
-      </p>
+        I’m skilled across the full stack, particularly in Flutter, Firebase, and clean architecture, and I pride myself on efficient workflows with
+        CI/CD integration using GitHub and Codemagic. No matter the project, I aim to build resilient, scalable code that keeps users coming back.
+      </Box>
       <Link to="Services" smooth={true} duration={1000}>
-        <h5 style={{ color: "#A08831", cursor: "pointer" }}>Learn more</h5>
+        <Box
+          component="h5"
+          sx={{
+            color: "#A08831",
+            cursor: "pointer",
+            textAlign: { xs: "center", md: "left" },
+          }}
+        >
+          Learn more
+        </Box>
       </Link>
     </Box>
   );
