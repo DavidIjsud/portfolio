@@ -12,8 +12,8 @@ export default function Home() {
           flexDirection: "column",
           direction: "column",
           backgroundColor: "#323337",
-          paddingLeft: "100px",
-          paddingRight: "100px",
+          paddingLeft: { xs: 2, sm: 6, md: 12 },
+          paddingRight: { xs: 2, sm: 6, md: 12 },
           minHeight: "100vh",
         }}
       >

@@ -14,11 +14,11 @@ export default function ContactSection() {
           direction: "column",
           backgroundColor: "#37383C",
           width: "100%",
-          paddingLeft: "50px",
-          paddingRight: "50px",
-          paddingTop: "120px",
-          paddingBottom: "120px",
-          gap: 0,
+          paddingLeft: { xs: 2, md: 6 },
+          paddingRight: { xs: 2, md: 6 },
+          paddingTop: { xs: 4, md: 15 },
+          paddingBottom: { xs: 4, md: 15 },
+          gap: { xs: 2, md: 0 },
         }}
       >
         <h3
@@ -42,10 +42,11 @@ export default function ContactSection() {
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: { xs: "column", sm: "row" },
             justifyContent: "center",
-            gap: 5,
-            marginTop: "20px",
+            alignItems: "center",
+            gap: { xs: 2, sm: 5 },
+            marginTop: { xs: 2, sm: 3 },
           }}
         >
           <a
