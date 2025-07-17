@@ -48,11 +48,13 @@ export default function ServicesSection() {
           component="h4"
           sx={{
             alignSelf: "center",
-            width: { xs: "100%", sm: "80%" },
-            textAlign: "center",
-            fontSize: { xs: 14, md: "inherit" },
-            lineHeight: { xs: 1.5, md: "inherit" },
-            padding: { xs: 0, md: 0 },
+            width: "90%",
+            maxWidth: 600,
+            textAlign: { xs: "justify", md: "center" },
+            fontSize: { xs: 14, sm: 16, md: "inherit" },
+            lineHeight: 1.5,
+            padding: "0 16px",
+            margin: 0,
           }}
         >
           Crafting high-quality mobile apps with Flutter, I excel in building

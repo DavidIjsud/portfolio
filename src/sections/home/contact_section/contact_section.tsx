@@ -34,11 +34,23 @@ export default function ContactSection() {
         <h1 style={{ alignSelf: "center", lineHeight: "0" }}>
           Ways to contact me
         </h1>
-        <h4 style={{ alignSelf: "center", width: "50%", textAlign: "center" }}>
+        <Box
+          component="h4"
+          sx={{
+            alignSelf: "center",
+            width: "90%",
+            maxWidth: 600,
+            textAlign: { xs: "justify", md: "center" },
+            fontSize: { xs: 14, sm: 16, md: "inherit" },
+            lineHeight: 1.5,
+            padding: "0 16px",
+            margin: 0,
+          }}
+        >
           I’d love to connect! Whether you have a project in mind, want to
           collaborate, or just have questions, feel free to reach out. Let’s
           work together to turn ideas into impactful solutions.
-        </h4>
+        </Box>
         <Box
           sx={{
             display: "flex",

@@ -47,12 +47,15 @@ export default function PortfolioSection() {
         >
           Here samples of my<br />projects
         </h1>
-        <h4
-          style={{
+        <Box
+          component="h4"
+          sx={{
             alignSelf: "center",
             width: "90%",
             maxWidth: 600,
-            textAlign: "center",
+            textAlign: { xs: "justify", md: "center" },
+            fontSize: { xs: 14, sm: 16, md: "inherit" },
+            lineHeight: 1.5,
             padding: "0 16px",
             margin: 0,
           }}
@@ -63,7 +66,7 @@ export default function PortfolioSection() {
           apps to e-commerce platforms, my portfolio reflects a dedication to
           building solutions that adapt to user needs and drive tangible
           results.
-        </h4>
+        </Box>
         <Box
           sx={{
             display: "flex",
