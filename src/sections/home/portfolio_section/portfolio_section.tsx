@@ -35,10 +35,28 @@ export default function PortfolioSection() {
         >
           Portfolio
         </h3>
-        <h1 style={{ alignSelf: "center", lineHeight: "0" }}>
-          Here samples of my projects
+        <h1
+          style={{
+            alignSelf: "center",
+            lineHeight: 1.1,
+            fontSize: "clamp(1.3rem, 5vw, 2.2rem)",
+            textAlign: "center",
+            fontWeight: 700,
+            margin: '0 0 18px 0',
+          }}
+        >
+          Here samples of my<br />projects
         </h1>
-        <h4 style={{ alignSelf: "center", width: "50%", textAlign: "center" }}>
+        <h4
+          style={{
+            alignSelf: "center",
+            width: "90%",
+            maxWidth: 600,
+            textAlign: "center",
+            padding: "0 16px",
+            margin: 0,
+          }}
+        >
           Explore my work across mobile app and web solutions, where each
           project is crafted to deliver high-impact experiences through clean
           code, intuitive interfaces, and reliable functionality. From fintech

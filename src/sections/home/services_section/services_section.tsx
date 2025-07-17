@@ -14,40 +14,61 @@ export default function ServicesSection() {
           direction: "column",
           backgroundColor: "#37383C",
           width: "100%",
-          paddingLeft: "50px",
-          paddingRight: "50px",
-          paddingTop: "120px",
-          paddingBottom: "120px",
-          gap: 0,
+          paddingLeft: { xs: 2, md: 6 },
+          paddingRight: { xs: 2, md: 6 },
+          paddingTop: { xs: 4, md: 15 },
+          paddingBottom: { xs: 4, md: 15 },
+          gap: { xs: 2, md: 0 },
         }}
       >
-        <h3
-          style={{
+        <Box
+          component="h3"
+          sx={{
             color: "#A08831",
             alignContent: "center",
             alignSelf: "center",
             lineHeight: "0",
+            fontSize: { xs: 18, md: "inherit" },
           }}
         >
           Services
-        </h3>
-        <h1 style={{ alignSelf: "center", lineHeight: "0" }}>
+        </Box>
+        <Box
+          component="h1"
+          sx={{
+            alignSelf: "center",
+            lineHeight: "0",
+            fontSize: { xs: 24, md: "inherit" },
+            textAlign: "center",
+          }}
+        >
           What I am great at
-        </h1>
-        <h4 style={{ alignSelf: "center", width: "50%", textAlign: "center" }}>
+        </Box>
+        <Box
+          component="h4"
+          sx={{
+            alignSelf: "center",
+            width: { xs: "100%", sm: "80%" },
+            textAlign: "center",
+            fontSize: { xs: 14, md: "inherit" },
+            lineHeight: { xs: 1.5, md: "inherit" },
+            padding: { xs: 0, md: 0 },
+          }}
+        >
           Crafting high-quality mobile apps with Flutter, I excel in building
           scalable, user-friendly solutions. With strong full-stack skills and a
           focus on clean architecture, I deliver robust code that adapts easily
           to new features. Proficient in CI/CD and Firebase, I ensure seamless
           app experiences that drive engagement and customer satisfaction.
-        </h4>
+        </Box>
         <Box
           sx={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: { xs: "column", md: "row" },
             justifyContent: "center",
-            gap: 20,
-            marginTop: "120px",
+            alignItems: "center",
+            gap: { xs: 4, md: 20 },
+            marginTop: { xs: 4, md: 15 },
           }}
         >
           <Box
@@ -61,8 +82,8 @@ export default function ServicesSection() {
           >
             <Box
               sx={{
-                width: "260px",
-                height: "260px",
+                width: { xs: 180, md: 260 },
+                height: { xs: 180, md: 260 },
                 backgroundColor: "#323237",
                 display: "flex",
                 flexDirection: "column",
@@ -73,7 +94,7 @@ export default function ServicesSection() {
               <StayCurrentPortraitIcon
                 sx={{
                   color: "white",
-                  fontSize: "120px",
+                  fontSize: { xs: 60, md: 120 },
                   alignSelf: "center",
                 }}
               />
