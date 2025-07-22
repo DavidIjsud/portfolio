@@ -86,22 +86,9 @@ export default function HomeContactInformation() {
       >
         Contact me
       </Button>
-      <Button
-        variant="contained"
-        href="https://david-garcia-romero.com"
-        target="_blank"
-        sx={{
-          marginTop: 16,
-          color: "white",
-          backgroundColor: "#A08831",
-          width: { xs: 220, md: 180 },
-          '&:hover': {
-            backgroundColor: "#8a7427",
-          },
-        }}
-      >
-        Abrir la app en Android
-      </Button>
+      <a href="intent://david-garcia-romero.com/#Intent;scheme=https;package=la.manzana_verde_app;end;">
+        Open in app
+      </a>
     </Box>
   );
 }
