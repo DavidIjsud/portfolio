@@ -89,6 +89,16 @@ export default function HomeContactInformation() {
       <a href="intent://david-garcia-romero.com/#Intent;scheme=https;package=la.manzana_verde_app;end;">
         Open in app
       </a>
+      <a href="intent://link.manzanaverde.la/#Intent;scheme=https;package=la.manzana_verde_app;end;">
+        Open in app link.manzanaverde.la
+      </a>
+      <a href="intent://manzanaverde.la/#Intent;scheme=https;package=la.manzana_verde_app;end;">
+        Open in app manzanaverde.la
+      </a>
+      <a href="intent://manzanaverde.la/plans#Intent;scheme=https;package=la.manzana_verde_app;end;">
+        Open in app option plans
+      </a>
+
     </Box>
   );
 }
