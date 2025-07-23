@@ -86,7 +86,7 @@ export default function HomeContactInformation() {
       >
         Contact me
       </Button>
-      <a href="intent://david-garcia-romero.com/#Intent;scheme=https;package=la.manzana_verde_app;end;">
+      {/* <a href="intent://david-garcia-romero.com/#Intent;scheme=https;package=la.manzana_verde_app;end;">
         Open in app
       </a>
       <a href="intent://link.manzanaverde.la/#Intent;scheme=https;package=la.manzana_verde_app;end;">
@@ -95,9 +95,9 @@ export default function HomeContactInformation() {
       <a href="intent://manzanaverde.la/#Intent;scheme=https;package=la.manzana_verde_app;end;">
         Open in app manzanaverde.la
       </a>
-      <a href="intent://manzanaverde.la/plans#Intent;scheme=https;package=la.manzana_verde_app;end;">
+      <a href="intent://https://manzanaverde.la/plans#Intent;scheme=https;package=la.manzana_verde_app;end;">
         Open in app option plans
-      </a>
+      </a> */}
 
     </Box>
   );
