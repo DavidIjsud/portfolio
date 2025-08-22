@@ -1,6 +1,22 @@
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
+// Función para abrir la app con fallback
+const openAppWithFallback = (path: string) => {
+  const universalLink = `https://david-garcia-romero.com${path}`;
+  const customScheme = `la.manzanaVerdeApp://${path}`;
+
+  // Intentar abrir con el esquema personalizado primero
+  window.location.href = customScheme;
+
+  // Fallback: después de un delay, verificar si la app se abrió
+  setTimeout(() => {
+    // Si estamos en la misma página, significa que la app no se abrió
+    // Entonces redirigir a la URL universal
+    window.location.href = universalLink;
+  }, 1000);
+};
+
 export default function HomeContactInformation() {
   return (
     <Box
@@ -90,7 +106,7 @@ export default function HomeContactInformation() {
         href="https://david-garcia-romero.com/s/miraflores"
         onClick={e => {
           e.preventDefault();
-          window.location.href = 'la.manzanaVerdeApp://s/miraflores';
+          openAppWithFallback('/s/miraflores');
         }}
         style={{ textDecoration: "none", color: "white", marginLeft: "16px", marginTop: "30px", display: "inline-block" }}
       >
@@ -102,7 +118,7 @@ export default function HomeContactInformation() {
             width: { xs: "180px", md: "150px" },
           }}
         >
-          Abrir en la App 1
+          Abrir en la App 2
         </Button>
       </a>
     </Box>
