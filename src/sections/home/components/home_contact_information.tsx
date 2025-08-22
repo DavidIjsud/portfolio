@@ -86,19 +86,25 @@ export default function HomeContactInformation() {
       >
         Contact me
       </Button>
-      {/* <a href="intent://david-garcia-romero.com/#Intent;scheme=https;package=la.manzana_verde_app;end;">
-        Open in app
+      <a
+        href="https://david-garcia-romero.com/s/miraflores"
+        onClick={e => {
+          e.preventDefault();
+          window.location.href = 'la.manzanaVerdeApp://s/miraflores';
+        }}
+        style={{ textDecoration: "none", color: "white", marginLeft: "16px", marginTop: "30px", display: "inline-block" }}
+      >
+        <Button
+          variant="outlined"
+          sx={{
+            color: "white",
+            borderColor: "#A08831",
+            width: { xs: "180px", md: "150px" },
+          }}
+        >
+          Abrir en la App 1
+        </Button>
       </a>
-      <a href="intent://link.manzanaverde.la/#Intent;scheme=https;package=la.manzana_verde_app;end;">
-        Open in app link.manzanaverde.la
-      </a>
-      <a href="intent://manzanaverde.la/#Intent;scheme=https;package=la.manzana_verde_app;end;">
-        Open in app manzanaverde.la
-      </a>
-      <a href="intent://manzanaverde.la/plans#Intent;scheme=https;package=la.manzana_verde_app;end;">
-        Open in app option plans
-      </a> */}
-      <a href="https://david-garcia-romero.com/s/miraflores">Open in App</a>
     </Box>
   );
 }
