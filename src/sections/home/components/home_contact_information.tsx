@@ -102,24 +102,20 @@ export default function HomeContactInformation() {
       >
         Contact me
       </Button>
-      <a
-        href="https://david-garcia-romero.com/s/miraflores"
-        onClick={e => {
-          e.preventDefault();
-          openAppWithFallback('/s/miraflores');
-        }}
-        style={{ textDecoration: "none", color: "white", marginLeft: "16px", marginTop: "30px", display: "inline-block" }}
-      >
-        <Button
-          variant="outlined"
-          sx={{
-            color: "white",
-            borderColor: "#A08831",
-            width: { xs: "180px", md: "150px" },
-          }}
-        >
-          Abrir en la App 2
-        </Button>
+      {/* <a href="intent://david-garcia-romero.com/#Intent;scheme=https;package=la.manzana_verde_app;end;">
+        Open in app
+      </a>
+      <a href="intent://link.manzanaverde.la/#Intent;scheme=https;package=la.manzana_verde_app;end;">
+        Open in app link.manzanaverde.la
+      </a>
+      <a href="intent://manzanaverde.la/#Intent;scheme=https;package=la.manzana_verde_app;end;">
+        Open in app manzanaverde.la
+      </a>
+      <a href="intent://manzanaverde.la/plans#Intent;scheme=https;package=la.manzana_verde_app;end;">
+        Open in app option plans
+      </a> */}
+      <a href="intent://manzanaverde.la/?utm_source=franquicia&utm_medium=Miraflores+Arica&utm_campaign=franquicia#Intent;scheme=https;package=la.manzana_verde_app;end;">
+        Open with UTMS
       </a>
     </Box>
   );
