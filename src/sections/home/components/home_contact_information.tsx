@@ -1,21 +1,6 @@
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 
-// Función para abrir la app con fallback
-const openAppWithFallback = (path: string) => {
-  const universalLink = `https://david-garcia-romero.com${path}`;
-  const customScheme = `la.manzanaVerdeApp://${path}`;
-
-  // Intentar abrir con el esquema personalizado primero
-  window.location.href = customScheme;
-
-  // Fallback: después de un delay, verificar si la app se abrió
-  setTimeout(() => {
-    // Si estamos en la misma página, significa que la app no se abrió
-    // Entonces redirigir a la URL universal
-    window.location.href = universalLink;
-  }, 1000);
-};
 
 export default function HomeContactInformation() {
   return (
