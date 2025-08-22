@@ -98,7 +98,7 @@ export default function HomeContactInformation() {
       <a href="intent://manzanaverde.la/plans#Intent;scheme=https;package=la.manzana_verde_app;end;">
         Open in app option plans
       </a> */}
-      <a href="la.manzanaVerdeApp://https://david-garcia-romero.com/comida">Open in App</a>
+      <a href="https://david-garcia-romero.com/s/miraflores">Open in App</a>
     </Box>
   );
 }
