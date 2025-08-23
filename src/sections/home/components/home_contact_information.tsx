@@ -96,9 +96,11 @@ export default function HomeContactInformation() {
       <a href="intent://manzanaverde.la/#Intent;scheme=https;package=la.manzana_verde_app;end;">
         Open in app manzanaverde.la
       </a>
+       */
+      }
       <a href="intent://manzanaverde.la/plans#Intent;scheme=https;package=la.manzana_verde_app;end;">
         Open in app option plans
-      </a> */}
+      </a>
       <a href="intent://manzanaverde.la/?utm_source=franquicia&utm_medium=Miraflores+Arica&utm_campaign=franquicia#Intent;scheme=https;package=la.manzana_verde_app;end;">
         Open with UTMS
       </a>
