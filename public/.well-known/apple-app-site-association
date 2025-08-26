@@ -5,6 +5,7 @@
             {
                 "appID": "DATKZA8T3N.la.manzanaVerdeApp",
                 "paths": [
+                    "/",
                     "/plans/*"
                 ]
             }
