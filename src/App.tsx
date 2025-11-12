@@ -1,27 +1,16 @@
-import Box from "@mui/material/Box";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import Home from "./sections/home/home";
-import ServicesSection from "./sections/home/services_section/services_section";
-import PortfolioSection from "./sections/home/portfolio_section/portfolio_section";
-import ContactSection from "./sections/home/contact_section/contact_section";
+import HomePage from "./pages/HomePage";
+import StripeSuccessPage from "./pages/StripeSuccessPage";
 
 function App() {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        direction: "column",
-        width: "100vw",
-        minHeight: "100vh",
-        backgroundColor: "#323337",
-      }}
-    >
-      <Home />
-      <ServicesSection />
-      <PortfolioSection />
-      <ContactSection />
-    </Box>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/stripe-successfull" element={<StripeSuccessPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
