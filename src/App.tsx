@@ -9,6 +9,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/stripe-successfull" element={<StripeSuccessPage />} />
+        <Route path="/stripe-success" element={<StripeSuccessPage />} />
+        <Route path="/success" element={<StripeSuccessPage />} />
       </Routes>
     </BrowserRouter>
   );
