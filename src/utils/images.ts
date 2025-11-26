@@ -70,6 +70,22 @@ import abastibleFour from "../assets/images/mobile/abastible/abastible4.jpg";
 import abastibleFive from "../assets/images/mobile/abastible/abastible5.jpg";
 import abastibleSix from "../assets/images/mobile/abastible/abastible6.jpg";
 
+import drillOne from "../assets/images/mobile/drillhub/drill-1.png";
+import drillTwo from "../assets/images/mobile/drillhub/drill-2.png";
+import drillThree from "../assets/images/mobile/drillhub/drill-3.png";
+import drillFour from "../assets/images/mobile/drillhub/drill-4.png";
+import drillFive from "../assets/images/mobile/drillhub/drill-5.png";
+import drillSix from "../assets/images/mobile/drillhub/drill-6.png";
+import drillSeven from "../assets/images/mobile/drillhub/drill-7.png";
+import drillEight from "../assets/images/mobile/drillhub/drill-8.png";
+import drillNine from "../assets/images/mobile/drillhub/drill-9.png";
+import drillTen from "../assets/images/mobile/drillhub/drill-10.png";
+import drillEleven from "../assets/images/mobile/drillhub/drill-11.png";
+import drillTwelve from "../assets/images/mobile/drillhub/drill-12.png";
+import drillThirteen from "../assets/images/mobile/drillhub/drill-13.png";
+import drillFourteen from "../assets/images/mobile/drillhub/drill-14.png";
+import drillFifteen from "../assets/images/mobile/drillhub/drill-15.png";
+
 import webOne from "../assets/images/web/web-1.png";
 import webTwo from "../assets/images/web/web-2.png";
 import webThree from "../assets/images/web/web-3.png";
@@ -141,4 +157,22 @@ export const prestoImages = [
   prestoNine,
   prestoTen,
   prestoEleven,
+];
+
+export const drillhubImages = [
+  drillOne,
+  drillTwo,
+  drillThree,
+  drillFour,
+  drillFive,
+  drillSix,
+  drillSeven,
+  drillEight,
+  drillNine,
+  drillTen,
+  drillEleven,
+  drillTwelve,
+  drillThirteen,
+  drillFourteen,
+  drillFifteen,
 ];
