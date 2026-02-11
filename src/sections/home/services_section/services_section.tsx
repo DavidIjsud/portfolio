@@ -57,7 +57,7 @@ export default function ServicesSection() {
             margin: 0,
           }}
         >
-          Crafting high-quality mobile apps with React Native, Kotlin and Flutter, I excel in building
+          Crafting high-quality mobile apps with Kotlin and Flutter, I excel in building
           scalable, user-friendly solutions. With strong full-stack skills and a
           focus on clean architecture, I deliver robust code that adapts easily
           to new features. Proficient in CI/CD and Firebase, I ensure seamless
