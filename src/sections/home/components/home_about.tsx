@@ -42,22 +42,13 @@ export default function HomeAbout() {
           padding: { xs: "0 10px", md: 0 },
         }}
       >
-        Senior React Native Engineer with 7+ years of experience designing and
-        delivering scalable mobile applications for startups and high-growth
-        companies across fintech, health, and consumer platforms. Expert in
-        TypeScript, advanced state management (Redux, Zustand, Context), and
-        performance-driven mobile architecture.
+        I'm David, a dedicated Mobile Engineer with over 7 years of experience building high-quality Android and Flutter applications. I specialize in delivering scalable and user-focused solutions, from fintech platforms to e-commerce and logistics apps, with a strong track record at companies like Presto, Loyalty Clubs, and Manzana Verde Inc.
         <br />
         <br />
-        Proven track record publishing
-        production apps to App Store and Google Play, leading cross-functional
-        teams, and building secure, payment-enabled systems using Stripe and
-        Firebase. Strong background in Clean Architecture, CI/CD automation, and
-        mobile-native integrations.
+        My core stack includes Kotlin for android development, Flutter, Firebase, CI/CD pipelines with GitHub Actions, Codemagic and NestJS with TypeScript for backend. I have hands-on experience with secure mobile development practices, modern architecture patterns like MVVM and Clean Architecture, and backend development using NestJS to create robust RESTful and GraphQL APIs.
         <br />
         <br />
-        I’m skilled across the full stack, particularly in typescript for react native development, Flutter and Android with kotlin, Firebase, and clean architecture, and I pride myself on efficient workflows with
-        CI/CD integration using GitHub and Codemagic. No matter the project, I aim to build resilient, scalable code that keeps users coming back.
+        I’m skilled across the full stack, particularly in Kotlin for android development, Flutter, Firebase, and clean architecture, and I pride myself on efficient workflows with CI/CD integration using GitHub and Codemagic. No matter the project, I aim to build resilient, scalable code that keeps users coming back.
         <br />
         Whether working in startups or enterprise environments, I take full ownership of product development, from planning and implementation to release. I'm passionate about crafting smooth, reliable user experiences and contributing to high-impact mobile products.
       </Box>
