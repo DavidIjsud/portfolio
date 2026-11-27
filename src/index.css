@@ -1,15 +1,14 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
+:root {
   --color-ink: #0a0b0f;
   --color-panel: #11131a;
   --color-line: #23252e;
   --color-accent: #c7f45b;
   --color-accent-soft: #e6ffa8;
   --color-muted: #9aa1b1;
-  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 @layer base {
