@@ -1,54 +1,25 @@
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { ArrowLeft, Check } from 'lucide-react';
+import { useLanguage } from '../i18n';
 
 export default function StripeSuccessPage() {
+  const { t } = useLanguage();
+
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        minHeight: "100vh",
-        width: "100vw",
-        backgroundColor: "#323337",
-        padding: { xs: "20px", md: "40px" },
-      }}
-    >
-      <CheckCircleIcon
-        sx={{
-          fontSize: { xs: "80px", md: "120px" },
-          color: "#4CAF50",
-          marginBottom: "20px",
-        }}
-      />
-      <Typography
-        variant="h3"
-        component="h1"
-        sx={{
-          color: "white",
-          textAlign: "center",
-          marginBottom: "16px",
-          fontSize: { xs: "2rem", md: "3rem" },
-          fontWeight: "bold",
-        }}
+    <main className="bg-grid flex min-h-screen flex-col items-center justify-center px-6 text-center">
+      <div className="flex h-20 w-20 items-center justify-center rounded-full border border-accent/30 bg-accent/10 text-accent">
+        <Check size={36} strokeWidth={2.2} />
+      </div>
+      <h1 className="mt-8 font-display text-3xl font-semibold text-white sm:text-4xl">
+        {t.stripe.title}
+      </h1>
+      <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">{t.stripe.body}</p>
+      <a
+        href="/"
+        className="mt-8 inline-flex items-center gap-2 rounded-full border border-line bg-panel px-5 py-3 text-sm font-semibold text-white transition-colors hover:border-accent hover:text-accent"
       >
-        Configuration Successful!
-      </Typography>
-      <Typography
-        variant="h6"
-        component="p"
-        sx={{
-          color: "#B0B0B0",
-          textAlign: "center",
-          maxWidth: "600px",
-          fontSize: { xs: "1rem", md: "1.25rem" },
-        }}
-      >
-        Your configuration has been completed successfully.
-      </Typography>
-    </Box>
+        <ArrowLeft size={16} />
+        {t.stripe.back}
+      </a>
+    </main>
   );
 }
-

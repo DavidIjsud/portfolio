@@ -1,26 +1,19 @@
-import Box from "@mui/material/Box";
-import Home from "../sections/home/home";
-import ServicesSection from "../sections/home/services_section/services_section";
-import PortfolioSection from "../sections/home/portfolio_section/portfolio_section";
-import ContactSection from "../sections/home/contact_section/contact_section";
+import Header from '../components/Header';
+import About from '../sections/About';
+import Contact from '../sections/Contact';
+import Hero from '../sections/Hero';
+import Trusted from '../sections/Trusted';
+import Work from '../sections/Work';
 
 export default function HomePage() {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        direction: "column",
-        width: "100vw",
-        minHeight: "100vh",
-        backgroundColor: "#323337",
-      }}
-    >
-      <Home />
-      <ServicesSection />
-      <PortfolioSection />
-      <ContactSection />
-    </Box>
+    <main className="min-h-screen bg-ink">
+      <Header />
+      <Hero />
+      <Trusted />
+      <About />
+      <Work />
+      <Contact />
+    </main>
   );
 }
-
